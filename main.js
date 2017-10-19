@@ -20,7 +20,7 @@ let win;
 app.once('ready',()=>{
   win = new BrowserWindow({width:800, height:600});
   win.on('closed',()=>{win = null});
-  // win.loadURL(`file://${__dirname}/index.html`);
-  win.loadURL('http://github.com');
+  win.loadURL(`file://${__dirname}/index.html`);
+  // win.loadURL('http://github.com');
   // win.webContents.setFrameRate(50);
 });
