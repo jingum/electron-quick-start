@@ -1,17 +1,26 @@
 const {app, BrowserWindow} = require('electron')
 
-app.disableHardwareAcceleration()
+// app.disableHardwareAcceleration()
 
-let win
-app.once('ready', () => {
-  win = new BrowserWindow({
-    webPreferences: {
-      offscreen: true
-    }
-  })
-  win.loadURL('https://www.github.com')
-  win.webContents.on('paint', (event, dirty, image) => {
-    // updateBitmap(dirty, image.getBitmap())
-  })
-  win.webContents.setFrameRate(30)
-})
+// let win
+// app.once('ready', () => {
+//   win = new BrowserWindow({
+//     webPreferences: {
+//       offscreen: true
+//     }
+//   })
+//   win.loadURL(`file://${__dirname}/index.html`)
+//   win.webContents.on('paint', (event, dirty, image) => {
+//     //  updateBitmap(dirty, image.getBitmap())
+//   })
+//   win.webContents.setFrameRate(30)
+// })
+
+let win;
+app.once('ready',()=>{
+  win = new BrowserWindow({width:800, height:600});
+  win.on('closed',()=>{win = null});
+  // win.loadURL(`file://${__dirname}/index.html`);
+  win.loadURL('http://github.com');
+  // win.webContents.setFrameRate(50);
+});
