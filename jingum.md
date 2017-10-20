@@ -8,3 +8,9 @@
  reference from:
  http://www.cnblogs.com/chenjinxinlove/p/5881879.html
 
+2. how to package to asar
+ a. cnpm install -g asar
+ b. asar pack your-app app.asar
+
+ reference http://www.cnblogs.com/luobenCode/p/4510894.html
+
